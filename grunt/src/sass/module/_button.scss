@@ -1,0 +1,58 @@
+
+
+// Buttons
+//
+// Styleguide Buttons
+
+
+// 汎用ボタン
+//
+// :hover - マウスがボタンに乗った状態
+// :disabled - ボタンが使用不可能な状態
+//
+// Markup:
+// <button class="m-button {{modifier_class}} u-mb10">Button of button</button>
+// <div class="m-button {{modifier_class}} u-mb10">Button of div</div>
+// <a class="m-button {{modifier_class}} u-mb10">Button of a</a>
+//
+// Styleguide Buttons.1
+
+.m-button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  @include font-size(1.4);
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0086AB;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    background-color: #42AAC7;
+  }
+  &:disabled {
+    background-color: #999;
+    cursor: default;
+  }
+}
+
+
+// 汎用ボタン(小)
+//
+// :hover - マウスがボタンに乗った状態
+// :disabled - ボタンが使用不可能な状態
+//
+// Markup:
+// <button class="m-button m-button--small {{modifier_class}} u-mb10">Button of button</button>
+// <div class="m-button m-button--small {{modifier_class}} u-mb10">Button of div</div>
+// <a class="m-button m-button--small {{modifier_class}} u-mb10">Button of a</a>
+//
+// Styleguide Buttons.2
+
+.m-button--small {
+  padding: 5px 15px;
+}
+

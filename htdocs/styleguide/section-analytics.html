@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SONICJAM: Living Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">
+      <img class="logo01" src="public/logo01.png" alt="">
+      <img class="logo02" src="public/logo02.png" alt="">
+      <span>Style Guide</span>
+    </h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-analytics.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Analytics</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-analytics.html#kssref-analytics-1">
+                <span class="kss-nav__ref">1.1</span
+                ><span class="kss-nav__name">計測タグ関連</span>
+              </a>
+            </li>
+        </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-buttons.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Buttons</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div     id="kssref-analytics" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-analytics">
+          <span class="kss-title__ref">1</span
+          >Analytics
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h1>
+
+
+    </div>
+
+
+      </div>
+      <section id="kssref-analytics-1" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-analytics-1">
+          <span class="kss-title__ref">1.1</span
+          >計測タグ関連
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <!--
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        -->
+        <div class="kss-modifier__example">
+          <script>
+  // GA
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-00000000-2', 'auto');
+  ga('send', 'pageview');
+  // FB
+  window.fbAsyncInit = function() {
+    FB.Event.subscribe('edge.create', function(targetUrl) {ga('send', 'social', 'facebook', 'like', targetUrl);});
+    FB.Event.subscribe('edge.remove', function(targetUrl) {ga('send', 'social', 'facebook', 'unlike', targetUrl);});
+    FB.Event.subscribe('message.send', function(targetUrl) {ga('send', 'social', 'facebook', 'send', targetUrl);});
+  }
+  // TW
+  window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+  twttr.ready(function (twttr) {twttr.events.bind('click', function (e) {ga('send', 'social', 'twitter', 'click', window.location.href); });
+  twttr.events.bind('tweet', function (e) {ga('send', 'social', 'twitter', 'tweet', window.location.href);});});
+</script>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script&gt;
+  // GA
+  (function(i,s,o,g,r,a,m){i[&#x27;GoogleAnalyticsObject&#x27;]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,&#x27;script&#x27;,&#x27;//www.google-analytics.com/analytics.js&#x27;,&#x27;ga&#x27;);
+  ga(&#x27;create&#x27;, &#x27;UA-00000000-2&#x27;, &#x27;auto&#x27;);
+  ga(&#x27;send&#x27;, &#x27;pageview&#x27;);
+  // FB
+  window.fbAsyncInit = function() {
+    FB.Event.subscribe(&#x27;edge.create&#x27;, function(targetUrl) {ga(&#x27;send&#x27;, &#x27;social&#x27;, &#x27;facebook&#x27;, &#x27;like&#x27;, targetUrl);});
+    FB.Event.subscribe(&#x27;edge.remove&#x27;, function(targetUrl) {ga(&#x27;send&#x27;, &#x27;social&#x27;, &#x27;facebook&#x27;, &#x27;unlike&#x27;, targetUrl);});
+    FB.Event.subscribe(&#x27;message.send&#x27;, function(targetUrl) {ga(&#x27;send&#x27;, &#x27;social&#x27;, &#x27;facebook&#x27;, &#x27;send&#x27;, targetUrl);});
+  }
+  // TW
+  window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src=&quot;https://platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,&quot;script&quot;,&quot;twitter-wjs&quot;));
+  twttr.ready(function (twttr) {twttr.events.bind(&#x27;click&#x27;, function (e) {ga(&#x27;send&#x27;, &#x27;social&#x27;, &#x27;twitter&#x27;, &#x27;click&#x27;, window.location.href); });
+  twttr.events.bind(&#x27;tweet&#x27;, function (e) {ga(&#x27;send&#x27;, &#x27;social&#x27;, &#x27;twitter&#x27;, &#x27;tweet&#x27;, window.location.href);});});
+&lt;/script&gt;</code></pre>
+      </div>
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+
+</body>
+</html>

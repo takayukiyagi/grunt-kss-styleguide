@@ -1,0 +1,57 @@
+
+//
+// @mixin spriteR
+// @description SpriteSmithで生成したスプライト画像をRetina化
+//
+// @param $sprite {Variable} 生成された_sprites.scssの変数を参照
+//
+// ex. @include spriteR($ttl-hoge);
+//
+
+@mixin spriteR-width($sprite) {
+  $width: nth($sprite, 5);
+  width: $width/2;
+}
+
+@mixin spriteR-height($sprite) {
+  $height: nth($sprite, 6);
+  height: $height/2;
+}
+
+@mixin spriteR-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+  background-repeat: no-repeat;
+}
+
+@mixin spriteR-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: ($sprite-offset-x/2)  ($sprite-offset-y/2);
+}
+
+@mixin spriteR-size($sprite) {
+  $sprite-size-x: nth($sprite, 7);
+  $sprite-size-y: nth($sprite, 8);
+  -webkit-background-size: ($sprite-size-x/2) ($sprite-size-y/2);
+  background-size: ($sprite-size-x/2) ($sprite-size-y/2);
+}
+
+@mixin spriteR-offset($sprite) {
+  @include spriteR-width($sprite);
+  @include spriteR-height($sprite);
+}
+
+@mixin spriteR-bg($sprite) {
+  @include spriteR-image($sprite);
+  @include spriteR-position($sprite);
+  @include spriteR-size($sprite);
+}
+
+@mixin spriteR($sprite) {
+  @include spriteR-width($sprite);
+  @include spriteR-height($sprite);
+  @include spriteR-image($sprite);
+  @include spriteR-position($sprite);
+  @include spriteR-size($sprite);
+}

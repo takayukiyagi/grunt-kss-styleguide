@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+
+// README
+//------------------------------
+// PrifixRules:
+//   assist:'is-','has-'
+//   utility:'u-'
+//   layout:'l-'
+//   module:'m-'
+//------------------------------
+// NamingExample:
+//   .is-assistName
+//   .has-assistName
+//   .u-utilityName
+//   .l-layoutName
+//   .m-moduleName
+//   .m-moduleName--modifirer
+//------------------------------
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Asset
+//
+//////////////////////////////////////////////////////////////////////
+
+// Mixins
+@import "asset/mixin/clearfix"; // clearfix
+@import "asset/mixin/link-underline"; // リンクの下線スタイルの調整
+@import "asset/mixin/spacing"; // 余白調整用のclassを出力
+@import "asset/mixin/output-margin"; // マージン調整用classの生成
+@import "asset/mixin/trbl"; // 要素の中央配置
+@import "asset/mixin/text"; // テキスト要素用
+@import "asset/mixin/opacity"; // 透明度指定用
+@import "asset/mixin/position"; // ポジション指定用
+@import "asset/mixin/background"; // 背景指定用
+@import "asset/mixin/image-size"; // 幅＆高さ指定用
+@import "asset/mixin/sprite-retina"; // スプライト画像のRetina対応
+
+// グローバルに扱える単一のスタイルが付与されたクラス
+// ┗ 共通プレフィックス: u-
+@import "asset/utility";
+
+// Componentの結合セレクタとして使用するクラス
+// ┗ 状態を表すプレフィックス: .is-
+// ┗ 拡張または修飾するプレフィックス: .has-
+@import "asset/assist";
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Base
+//
+//////////////////////////////////////////////////////////////////////
+
+// 基本設定・プロジェクト独自の変数管理
+@import "base/settings";
+
+// リセット
+@import "base/reset";
+
+// ベースのスタイル定義
+@import "base/basic";
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Layout
+//
+//////////////////////////////////////////////////////////////////////
+
+// プロジェクト共通のコンテナーブロック定義
+@import "layout/header";
+@import "layout/footer";
+@import "layout/contents";
+
+// ページ固有のコンテナーブロック定義
+@import "layout/hoge";
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// Module
+//
+//////////////////////////////////////////////////////////////////////
+
+// StyleGuideのみに使用
+@import "module/sg-analytics";
+
+// プロジェクトの各コンポーネント
+// ┗ 共通プレフィックス: c-
+// ┗ 再利用できるパターンとして、小さな単位のモジュールを定義
+// ┗ 出来る限り、最低限の機能を持ったものとして定義されるべきであり、
+// ┗ それ自体が固有の幅や色などの特色を持つことは避けるのが望ましい
+// ┗ 参考: http://getbootstrap.com/modules/
+@import "module/button";
+
+
+//////////////////////////////////////////////////////////////////////
+//
+// SourceMap
+//
+//////////////////////////////////////////////////////////////////////
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+

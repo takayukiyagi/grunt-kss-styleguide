@@ -1,0 +1,10 @@
+
+// @mixin opacity
+// @description 透明度指定
+// @param $type {Number} 0.0 ~ 1.0
+
+@mixin opacity( $opacity ) {
+  opacity: $opacity;
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE);
+}

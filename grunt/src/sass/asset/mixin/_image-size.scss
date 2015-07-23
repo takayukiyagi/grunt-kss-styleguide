@@ -1,0 +1,59 @@
+
+//
+// @mixin retinaImg
+// @description 画像を参照したwidth/heightを指定
+//
+// @param $path {String} "画像パス"
+// @param $img {Boolean} true: imgタグにもサイズ指定する
+//
+// ex. @include retinaImg( "path/to/img.png", img );
+//
+
+@mixin retinaImg( $path, $img:false ) {
+  width: image-width($path)/2;
+  height: image-height($path)/2;
+  @if $img == true {
+    img{
+      width: image-width($path)/2;
+      height: image-height($path)/2;
+    }
+  }
+}
+
+//
+// @mixin retinaImgTag
+// @description 画像を参照したwidth/heightを指定(imgタグ用)
+//
+// @param $path {String} "画像パス"
+//
+// ex. @include retinaImgTag( "path/to/img.png" );
+//
+
+@mixin retinaImgTag( $path ) {
+  img{
+    width: image-width($path)/2;
+    height: image-height($path)/2;
+  }
+}
+
+//
+// @mixin scaleImg
+// @description 画像を参照したwidth/heightを指定(Ratio指定可)
+//
+// @param $path {String} "画像パス"
+// @param $img {Boolean} true: imgタグにもサイズ指定する
+// @param $ratio {Number} 倍率指定
+//
+// ex. @include scaleImg( "path/to/img.png", 0.8 );
+//
+
+@mixin scaleImg( $path, $img:false, $ratio:1 ) {
+  width: round(image-width($path)*$ratio);
+  height: round(image-height($path)*$ratio);
+  @if $img == true {
+    img{
+      width: round(image-width($path)*$ratio);
+      height: round(image-height($path)*$ratio);
+    }
+  }
+}

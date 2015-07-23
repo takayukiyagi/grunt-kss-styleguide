@@ -1,0 +1,150 @@
+
+// float/clear
+
+.u-fll{
+    float: left !important;
+}
+
+.u-flr{
+    float: right !important;
+}
+
+.u-clearfix::after{
+    @include clearfix;
+}
+
+// margin
+
+.u-trbl{
+    @include trbl;
+}
+
+.u-mauto{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+@include output-margin;
+
+// font
+
+.u-bold {
+    font-weight: bold !important;
+}
+
+.u-italic {
+    font-style: italic !important;
+}
+
+.u-fz07 {
+    font-size: 1rem !important;
+    transform: scale(0.7);
+}
+
+.u-fz08 {
+    font-size: 1rem !important;
+    transform: scale(0.8);
+}
+
+.u-fz09 {
+    font-size: 1rem !important;
+    transform: scale(0.9);
+}
+
+.u-fz10 {
+    font-size: 1.0rem !important;
+}
+
+.u-fz11 {
+    font-size: 1.1rem !important;
+}
+
+.u-fz12 {
+    font-size: 1.2rem !important;
+}
+
+.u-fz13 {
+    font-size: 1.3rem !important;
+}
+
+.u-fz14 {
+    font-size: 1.4rem !important;
+}
+
+.u-fz15 {
+    font-size: 1.5rem !important;
+}
+
+.u-fz16 {
+    font-size: 1.6rem !important;
+}
+
+.u-fz17 {
+    font-size: 1.7rem !important;
+}
+
+.u-fz18 {
+    font-size: 1.8rem !important;
+}
+
+.u-fz19 {
+    font-size: 1.9rem !important;
+}
+
+.u-fz20 {
+    font-size: 2.0rem !important;
+}
+
+// line-height
+
+.u-lh10 {
+    line-height: 1.0 !important;
+}
+
+.u-lh12 {
+    line-height: 1.2 !important;
+}
+
+.u-lh14 {
+    line-height: 1.4 !important;
+}
+
+.u-lh16 {
+    line-height: 1.6 !important;
+}
+
+.u-lh18 {
+    line-height: 1.8 !important;
+}
+
+// text
+
+.u-underline{
+    text-decoration: underline !important;
+}
+
+.u-center {
+    text-align: center !important;
+}
+
+.u-right {
+    text-align: right !important;
+}
+
+.u-left {
+    text-align: left !important;
+}
+
+// word-break
+
+.u-breakAll {
+    word-break: break-all !important;
+}
+
+.u-keepAll {
+    word-break: keep-all !important;
+}
+
+.u-nowrap {
+    white-space: nowrap !important;
+}

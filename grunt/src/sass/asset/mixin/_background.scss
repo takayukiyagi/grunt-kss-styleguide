@@ -1,0 +1,80 @@
+
+//
+// @mixin retinaBg
+// @description Retina用背景画像指定
+//
+// @param $path {String} "画像パス"
+// @param $pos1 {String} ポジション指定1
+// @param $pos2 {String} ポジション指定2
+// @param $repeat {String} リピート指定( no | x | y | xy )
+// @param $image-size {Boolean} true: width/height指定する
+// @param $text-indent {Boolean} true: 文字を飛ばす
+//
+// ex. @include retinaBg( "path/to/img.png", rignt, bottom, no, true, true );
+//
+
+@mixin retinaBg( $path, $pos1:left, $pos2:top, $repeat:false, $image-size:false, $text-indent:false ) {
+
+  @if $text-indent == true {
+    text-indent: -9999px;
+  }
+  @if $image-size == true {
+    width: image-width($path)/2;
+    height: image-height($path)/2;
+  }
+  background-image: url($path);
+  background-position: $pos1 $pos2;
+
+  @if $repeat == no {
+    background-repeat: no-repeat;
+  }
+  @else if $repeat == x {
+    background-repeat: repeat-x;
+  }
+  @else if $repeat == y {
+    background-repeat: repeat-y;
+  }
+  @else if $repeat == xy {
+    background-repeat: repeat;
+  }
+  background-size: image-width($path)/2 image-height($path)/2;
+}
+
+//
+// @mixin scaleBg
+// @description 背景画像指定(Ratio指定可)
+//
+// @param $path {String} "画像パス"
+// @param $pos1 {String} ポジション指定1
+// @param $pos2 {String} ポジション指定2
+// @param $repeat {String} リピート指定( no | x | y | xy )
+// @param $image-size {Boolean} true: width/height指定する
+// @param $ratio {Number} 倍率指定
+//
+// ex. @include scaleBg( "path/to/img.png", rignt, bottom, no, size, hide );
+//
+
+@mixin scaleBg( $path, $pos1:left, $pos2:top, $repeat:no, $image-size:false, $ratio:1 ) {
+
+  @if $image-size == true {
+    width: image-width($path)*$ratio;
+    height: image-height($path)*$ratio;
+  }
+  background-image: url($path);
+  background-position-x: $pos1;
+  background-position-y: $pos2;
+
+  @if $repeat == no {
+    background-repeat: no-repeat;
+  }
+  @else if $repeat == x {
+    background-repeat: repeat-x;
+  }
+  @else if $repeat == y {
+    background-repeat: repeat-y;
+  }
+  @else if $repeat == xy {
+    background-repeat: repeat;
+  }
+  background-size: image-width($path)*$ratio image-height($path)*$ratio;
+}

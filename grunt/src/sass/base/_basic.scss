@@ -1,0 +1,30 @@
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $fz-html; //10px
+    height: 100%;
+}
+
+body {
+    font-size: $fz-body;
+    font-family: $ff-body;
+    line-height: $lh-body;
+    color: $fc-body;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    color: $fc-link;
+}
+
+b {
+    font-weight: bold;
+}

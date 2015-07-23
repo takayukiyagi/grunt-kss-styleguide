@@ -1,0 +1,54 @@
+
+// display
+
+.is-hidden {
+    display: none !important;
+}
+
+.is-block {
+    display: block !important;
+}
+
+.is-inline-block {
+    display: inline-block !important;
+}
+
+.is-inline {
+    display: inline !important;
+}
+
+.is-table {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+.is-tableCell {
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+// position
+
+.is-relative {
+    position: relative !important;
+}
+
+.is-absolute {
+    position: absolute !important;
+}
+
+.is-fixed {
+    position: fixed !important;
+}
+
+// has styles
+
+.has-border {
+}
+
+.has-header {
+}
+
+.has-icon {
+}

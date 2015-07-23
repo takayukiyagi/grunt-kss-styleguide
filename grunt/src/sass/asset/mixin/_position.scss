@@ -1,0 +1,66 @@
+
+//
+// @mixin abs
+// @description ポジションabsolute指定
+//
+// @param $point {String} 基準指定( lt | rt | lb | rb )
+// @param $pos1 {Number|String} ポジション1の値
+// @param $pos2 {Number|String} ポジション2の値
+//
+// ex. @include abs( lt, 10%, 10px );
+//
+
+@mixin abs( $point, $pos1:0, $pos2:0 ) {
+
+  position: absolute;
+
+  @if $point == lt {
+    left: $pos1;
+    top: $pos2;
+  }
+  @else if $point == rt {
+    right: $pos1;
+    top: $pos2;
+  }
+  @else if $point == lb {
+    left: $pos1;
+    bottom: $pos2;
+  }
+  @else if $point == rb {
+    right: $pos1;
+    bottom: $pos2;
+  }
+}
+
+//
+// @mixin fix
+// @description ポジションfixed指定
+//
+// @param $point {String} 基準指定( lt | rt | lb | rb )
+// @param $pos1 {Number|String} ポジション1の値
+// @param $pos2 {Number|String} ポジション2の値
+//
+// ex. @include fix( lt, 10%, 10px );
+//
+
+@mixin fix( $point, $pos1:0, $pos2:0 ) {
+
+  position: fixed;
+
+  @if $point == lt {
+    left: $pos1;
+    top: $pos2;
+  }
+  @else if $point == rt {
+    right: $pos1;
+    top: $pos2;
+  }
+  @else if $point == lb {
+    left: $pos1;
+    bottom: $pos2;
+  }
+  @else if $point == rb {
+    right: $pos1;
+    bottom: $pos2;
+  }
+}

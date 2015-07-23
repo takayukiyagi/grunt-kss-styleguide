@@ -1,0 +1,53 @@
+
+// @mixin font-size
+// @description フォントサイズ指定(px指定はIE8以下用)
+// @param $size {Number} 数値
+
+@mixin font-size( $size:1 ) {
+  // root値は_settings.scssの$fz-html参照
+  font-size: ($size * 10) + px;
+  font-size: $size + rem;
+}
+
+// @mixin webfont
+// @description ウェブフォント指定($wf-変数は_settings.scssを参照)
+// @param $weight {String} nomal | bold
+// @param $family {String} main | sub
+
+@mixin webfont( $weight:bold, $family:main ) {
+
+  @if $weight == bold {
+    font-weight: bold;
+  }
+  @else if $weight == nomal {
+    font-weight: normal;
+  }
+  @if $family == main {
+   font-family: $wf-main;
+  }
+  @else if $family == sub {
+   font-family: $wf-sub;
+  }
+}
+
+// @mixin text-hidden
+// @description 文字を飛ばす
+
+@mixin text-hidden(){
+  white-space: nowrap;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+// @mixin text-hover
+// @description ホバーで色変化
+// @param $color {String} 色
+// @param $ms {Number} ミリ秒
+
+@mixin text-hover( $color:$fc-link, $ms:0.2 ) {
+  -webkit-transition:all $ms + s;
+  transition:all $ms + s;
+  &:hover {
+    color: $color;
+  }
+}
