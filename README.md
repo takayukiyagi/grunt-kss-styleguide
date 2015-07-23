@@ -2,8 +2,8 @@
 
 ```
 .
+├── README.md
 ├── grunt
-│     ├── README.md
 │     ├── package.json
 │     ├── Gruntfile.coffee
 │     ├── node_modules
